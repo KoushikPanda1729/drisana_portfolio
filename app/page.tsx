@@ -316,7 +316,9 @@ export default function Home() {
                         color: '#6366f1',
                         border: 'none',
                         borderRadius: '28px',
-                        boxShadow: '0 10px 30px rgba(0,0,0,0.2)'
+                        boxShadow: '0 10px 30px rgba(0,0,0,0.2)',
+                        flex: '1 1 auto',
+                        minWidth: '200px'
                       }}
                     >
                       Let&apos;s Work Together
@@ -336,7 +338,9 @@ export default function Home() {
                         color: 'white',
                         border: '2px solid rgba(255,255,255,0.4)',
                         borderRadius: '12px',
-                        backdropFilter: 'blur(10px)'
+                        backdropFilter: 'blur(10px)',
+                        flex: '1 1 auto',
+                        minWidth: '200px'
                       }}
                     >
                       Download Resume
@@ -373,24 +377,6 @@ export default function Home() {
 
                   {/* Social Links */}
                   <div style={{ display: 'flex', gap: '16px', alignItems: 'center', marginBottom: '32px' }}>
-                    <Button
-                      type="text"
-                      icon={<GithubOutlined style={{ fontSize: '24px', color: 'white' }} />}
-                      href="https://github.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{
-                        width: '56px',
-                        height: '56px',
-                        borderRadius: '50%',
-                        background: '#1a1a1a',
-                        border: 'none',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        padding: 0
-                      }}
-                    />
                     <Button
                       type="text"
                       icon={<LinkedinOutlined style={{ fontSize: '24px', color: 'white' }} />}
@@ -452,22 +438,52 @@ export default function Home() {
                 <div style={{
                   display: 'flex',
                   justifyContent: 'center',
-                  alignItems: 'center'
+                  alignItems: 'center',
+                  position: 'relative'
                 }}>
+                  {/* Decorative Elements */}
                   <div style={{
-                    background: '#f5e6d3',
+                    position: 'absolute',
+                    top: '-20px',
+                    right: '40px',
+                    width: '100px',
+                    height: '100px',
+                    background: 'rgba(255,255,255,0.1)',
+                    borderRadius: '50%',
+                    filter: 'blur(40px)',
+                    zIndex: 0
+                  }} />
+                  <div style={{
+                    position: 'absolute',
+                    bottom: '40px',
+                    left: '20px',
+                    width: '80px',
+                    height: '80px',
+                    background: 'rgba(255,255,255,0.08)',
+                    borderRadius: '50%',
+                    filter: 'blur(30px)',
+                    zIndex: 0
+                  }} />
+
+                  <div style={{
+                    position: 'relative',
+                    background: 'linear-gradient(145deg, #f5e6d3 0%, #ede0d0 100%)',
                     borderRadius: '32px',
-                    padding: '24px',
-                    boxShadow: '0 20px 60px rgba(0,0,0,0.3)',
-                    maxWidth: '500px',
-                    width: '100%'
+                    padding: '20px',
+                    boxShadow: '0 25px 70px rgba(0,0,0,0.25), 0 10px 40px rgba(0,0,0,0.15)',
+                    maxWidth: '480px',
+                    width: '100%',
+                    border: '2px solid rgba(255,255,255,0.5)',
+                    transform: 'translateZ(0)',
+                    zIndex: 1
                   }}>
                     <div style={{
                       position: 'relative',
                       width: '100%',
                       aspectRatio: '3/4',
                       borderRadius: '24px',
-                      overflow: 'hidden'
+                      overflow: 'hidden',
+                      boxShadow: '0 10px 30px rgba(0,0,0,0.2)'
                     }}>
                       <Image
                         src="/designer-illustration.jpeg"
@@ -476,6 +492,16 @@ export default function Home() {
                         style={{ objectFit: 'cover' }}
                         priority
                       />
+                      {/* Subtle Gradient Overlay */}
+                      <div style={{
+                        position: 'absolute',
+                        bottom: 0,
+                        left: 0,
+                        right: 0,
+                        height: '120px',
+                        background: 'linear-gradient(to top, rgba(0,0,0,0.1) 0%, transparent 100%)',
+                        pointerEvents: 'none'
+                      }} />
                     </div>
                   </div>
                 </div>
@@ -490,6 +516,37 @@ export default function Home() {
             <Title level={2} style={{ textAlign: 'center', marginBottom: '50px', fontSize: '42px' }}>
               About Me
             </Title>
+
+            {/* Mobile Only Photo */}
+            <div className="mobile-only-photo" style={{ justifyContent: 'center', marginBottom: '40px' }}>
+              <div style={{
+                position: 'relative',
+                background: 'linear-gradient(145deg, #f5e6d3 0%, #ede0d0 100%)',
+                borderRadius: '24px',
+                padding: '16px',
+                boxShadow: '0 20px 50px rgba(0,0,0,0.15)',
+                maxWidth: '320px',
+                width: '100%',
+                border: '2px solid rgba(102, 126, 234, 0.2)'
+              }}>
+                <div style={{
+                  position: 'relative',
+                  width: '100%',
+                  aspectRatio: '3/4',
+                  borderRadius: '16px',
+                  overflow: 'hidden',
+                  boxShadow: '0 8px 20px rgba(0,0,0,0.15)'
+                }}>
+                  <Image
+                    src="/designer-illustration.jpeg"
+                    alt="Drisana Dasgupta"
+                    fill
+                    style={{ objectFit: 'cover' }}
+                  />
+                </div>
+              </div>
+            </div>
+
             <Row gutter={[48, 48]}>
               <Col xs={24} lg={12}>
                 <Card style={{ height: '100%', boxShadow: '0 4px 12px rgba(0,0,0,0.08)' }}>

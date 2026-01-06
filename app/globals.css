@@ -162,6 +162,11 @@ button:hover {
   font-family: var(--font-signature);
 }
 
+/* Mobile only photo in About section - hide on desktop */
+.mobile-only-photo {
+  display: none !important;
+}
+
 @media (max-width: 768px) {
   .section-padding {
     padding: 60px 16px;
@@ -173,6 +178,11 @@ button:hover {
 
   .desktop-menu {
     display: none !important;
+  }
+
+  /* Show mobile-only photo on mobile */
+  .mobile-only-photo {
+    display: flex !important;
   }
 
   header {
@@ -190,5 +200,92 @@ button:hover {
 
   .nav-signature-wrapper .bracket {
     font-size: 18px !important;
+  }
+
+  /* Hero section mobile optimizations */
+  #home {
+    padding: 24px 16px 40px !important;
+    min-height: auto !important;
+  }
+
+  #home > div {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  #home .ant-row {
+    flex-direction: column-reverse !important;
+    margin: 0 !important;
+  }
+
+  #home h1 {
+    font-size: 36px !important;
+    margin-bottom: 16px !important;
+  }
+
+  #home h2 {
+    font-size: 20px !important;
+    margin-bottom: 16px !important;
+  }
+
+  #home p {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 24px !important;
+  }
+
+  /* Mobile buttons */
+  #home .ant-btn {
+    width: 100% !important;
+    margin-bottom: 12px !important;
+  }
+
+  /* Contact info mobile */
+  #home > div > div > div > div:nth-child(2) > div > div:nth-child(4) {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 16px !important;
+    margin-bottom: 24px !important;
+  }
+
+  #home > div > div > div > div:nth-child(2) > div > div:nth-child(4) > div {
+    font-size: 14px !important;
+  }
+
+  /* Social icons mobile */
+  #home > div > div > div > div:nth-child(2) > div > div:nth-child(5) {
+    justify-content: center !important;
+    margin-bottom: 32px !important;
+  }
+
+  /* Photo card mobile - Enhanced visibility */
+  #home .ant-col {
+    margin-bottom: 32px !important;
+  }
+
+  /* Hide photo in hero section on mobile */
+  #home .ant-col:last-child {
+    display: none !important;
+  }
+
+  /* Content wrapper adjustments */
+  #home .ant-col:first-child > div {
+    max-width: 100% !important;
+    padding: 0 20px !important;
+  }
+
+  /* Hello badge mobile */
+  #home [style*="HELLO THERE"] {
+    margin-bottom: 24px !important;
+  }
+
+  /* Better spacing for text content */
+  #home .ant-col:first-child {
+    padding: 0 !important;
+  }
+
+  /* Make photo fill width better on mobile */
+  #home .ant-col:last-child {
+    padding: 0 !important;
   }
 }
