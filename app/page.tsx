@@ -264,12 +264,12 @@ export default function Home() {
                   <Title
                     level={1}
                     style={{
-                      fontSize: 'clamp(48px, 6vw, 72px)',
+                      fontSize: 'clamp(36px, 5vw, 52px)',
                       marginTop: '0',
-                      marginBottom: '24px',
+                      marginBottom: '20px',
                       fontWeight: 800,
                       lineHeight: 1.1,
-                      letterSpacing: '-2px',
+                      letterSpacing: '-1.5px',
                       color: 'white',
                       textShadow: '0 2px 20px rgba(0,0,0,0.1)'
                     }}
@@ -281,9 +281,9 @@ export default function Home() {
                   <Title
                     level={2}
                     style={{
-                      fontSize: 'clamp(24px, 3vw, 32px)',
+                      fontSize: 'clamp(20px, 2.5vw, 26px)',
                       marginTop: '0',
-                      marginBottom: '24px',
+                      marginBottom: '20px',
                       fontWeight: 400,
                       color: 'rgba(255,255,255,0.95)',
                       letterSpacing: '-0.5px'
@@ -295,33 +295,33 @@ export default function Home() {
                   {/* Description */}
                   <Paragraph style={{
                     color: 'rgba(255,255,255,0.9)',
-                    fontSize: '17px',
-                    lineHeight: 1.7,
-                    marginBottom: '40px',
+                    fontSize: '15px',
+                    lineHeight: 1.6,
+                    marginBottom: '32px',
                     fontWeight: 400
                   }}>
                     Crafting intuitive and beautiful digital experiences through user-centered design. Specialized in wireframing, prototyping, and bringing ideas to life.
                   </Paragraph>
 
                   {/* CTA Buttons */}
-                  <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', marginBottom: '48px' }}>
+                  <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginBottom: '36px' }}>
                     <Button
                       type="primary"
                       size="large"
                       href="mailto:drisanadasgupta123789@gmail.com"
                       className="btn-shine"
                       style={{
-                        height: '56px',
-                        padding: '0 40px',
-                        fontSize: '16px',
+                        height: '48px',
+                        padding: '0 32px',
+                        fontSize: '15px',
                         fontWeight: 600,
                         background: 'white',
                         color: '#6366f1',
                         border: 'none',
-                        borderRadius: '28px',
-                        boxShadow: '0 10px 30px rgba(0,0,0,0.2)',
+                        borderRadius: '24px',
+                        boxShadow: '0 8px 24px rgba(0,0,0,0.2)',
                         flex: '1 1 auto',
-                        minWidth: '200px'
+                        minWidth: '180px'
                       }}
                     >
                       Let&apos;s Work Together
@@ -333,9 +333,9 @@ export default function Home() {
                       href="/cv.pdf"
                       download="Drisana_Dasgupta_CV.pdf"
                       style={{
-                        height: '56px',
-                        padding: '0 40px',
-                        fontSize: '16px',
+                        height: '48px',
+                        padding: '0 32px',
+                        fontSize: '15px',
                         fontWeight: 600,
                         background: 'rgba(255,255,255,0.1)',
                         color: 'white',
@@ -408,10 +408,10 @@ export default function Home() {
                   <div style={{
                     position: 'relative',
                     background: 'linear-gradient(145deg, #f5e6d3 0%, #ede0d0 100%)',
-                    borderRadius: '32px',
-                    padding: '20px',
-                    boxShadow: '0 25px 70px rgba(0,0,0,0.25), 0 10px 40px rgba(0,0,0,0.15)',
-                    maxWidth: '480px',
+                    borderRadius: '24px',
+                    padding: '16px',
+                    boxShadow: '0 20px 50px rgba(0,0,0,0.2), 0 8px 30px rgba(0,0,0,0.12)',
+                    maxWidth: '360px',
                     width: '100%',
                     border: '2px solid rgba(255,255,255,0.5)',
                     transform: 'translateZ(0)',
