@@ -132,29 +132,52 @@ export default function Home() {
           width: '100%',
           display: 'flex',
           alignItems: 'center',
+          justifyContent: 'space-between',
           background: '#fff',
-          boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
-          padding: '0 20px'
+          boxShadow: '0 2px 12px rgba(0,0,0,0.08)',
+          padding: '0 50px',
+          height: '70px'
         }}
       >
-        <Button
-          type="text"
-          icon={<MenuOutlined style={{ fontSize: '20px' }} />}
-          onClick={showDrawer}
-          style={{
-            marginRight: '16px',
-            display: 'none'
-          }}
-          className="mobile-menu-button"
-        />
-        <div style={{ fontWeight: 700, fontSize: '20px', marginRight: '50px', color: '#6366f1' }}>
-          Drisana Dasgupta
+        {/* Left Side - Hamburger (Mobile) + Name */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+          <Button
+            type="text"
+            icon={<MenuOutlined style={{ fontSize: '22px' }} />}
+            onClick={showDrawer}
+            style={{
+              display: 'none',
+              width: '40px',
+              height: '40px',
+              padding: 0
+            }}
+            className="mobile-menu-button"
+          />
+
+          <div style={{
+            fontWeight: 700,
+            fontSize: '24px',
+            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text',
+            letterSpacing: '-0.5px'
+          }}>
+            Drisana Dasgupta
+          </div>
         </div>
+
+        {/* Right Side - Navigation */}
         <Menu
           mode="horizontal"
           items={menuItems}
           onClick={handleMenuClick}
-          style={{ flex: 1, minWidth: 0, border: 'none' }}
+          style={{
+            border: 'none',
+            background: 'transparent',
+            fontSize: '15px',
+            fontWeight: 500
+          }}
           className="desktop-menu"
         />
       </Header>
@@ -177,107 +200,247 @@ export default function Home() {
 
       <Content>
         {/* Hero Section */}
-        <section id="home" className="gradient-bg" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', padding: '80px 24px' }}>
-          <div style={{ maxWidth: 1200, margin: '0 auto', width: '100%' }}>
-            <Row gutter={[48, 48]} align="middle">
-              <Col xs={24} lg={14}>
-                <div style={{ color: 'white' }}>
-                  <Text style={{ color: 'rgba(255,255,255,0.9)', fontSize: '18px', fontWeight: 500 }}>
-                    Hello, I&apos;m
-                  </Text>
-                  <Title level={1} style={{ color: 'white', fontSize: '56px', marginTop: '10px', marginBottom: '20px', fontWeight: 700 }}>
-                    Drisana Dasgupta
-                  </Title>
-                  <Title level={2} style={{ color: 'rgba(255,255,255,0.95)', fontSize: '32px', fontWeight: 400, marginTop: 0 }}>
-                    UI/UX Designer
-                  </Title>
-                  <Paragraph style={{ color: 'rgba(255,255,255,0.9)', fontSize: '18px', marginTop: '30px', lineHeight: 1.8, maxWidth: '600px' }}>
-                    Creative UI/UX Designer passionate about crafting intuitive, user-centered digital experiences.
-                    Proficient in wireframing and prototyping using Figma and Adobe XD.
-                  </Paragraph>
-                  <div style={{ marginTop: '40px', display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
-                    <Button
-                      type="primary"
-                      size="large"
-                      icon={<MailOutlined />}
-                      onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
-                      style={{ height: '50px', padding: '0 32px', fontSize: '16px', background: 'white', color: '#6366f1', border: 'none' }}
-                    >
-                      Get In Touch
-                    </Button>
-                    <Popover
-                      content={
-                        <div style={{ width: '400px', height: '500px', maxWidth: '90vw' }}>
-                          <iframe
-                            src="/cv.pdf#toolbar=0&navpanes=0&scrollbar=0"
-                            style={{ width: '100%', height: '100%', border: 'none', borderRadius: '8px' }}
-                            title="Resume Preview"
-                          />
-                        </div>
-                      }
-                      title={
-                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                          <span style={{ fontWeight: 600 }}>Resume Preview</span>
-                          <Button
-                            type="text"
-                            icon={<DownloadOutlined style={{ fontSize: '18px' }} />}
-                            href="/cv.pdf"
-                            download="Drisana_Dasgupta_CV.pdf"
-                            style={{ color: '#6366f1', display: 'flex', alignItems: 'center' }}
-                          />
-                        </div>
-                      }
-                      trigger="hover"
-                      placement="bottom"
-                    >
-                      <Button
-                        size="large"
-                        icon={<DownloadOutlined />}
-                        href="/cv.pdf"
-                        download="Drisana_Dasgupta_CV.pdf"
-                        style={{ height: '50px', padding: '0 32px', fontSize: '16px', background: 'rgba(255,255,255,0.2)', color: 'white', borderColor: 'white' }}
-                      >
-                        Download Resume
-                      </Button>
-                    </Popover>
-                    <Button
-                      size="large"
-                      icon={<ProjectOutlined />}
-                      onClick={() => document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' })}
-                      style={{ height: '50px', padding: '0 32px', fontSize: '16px', background: 'transparent', color: 'white', borderColor: 'white' }}
-                    >
-                      View Projects
-                    </Button>
-                  </div>
-                  <div style={{ marginTop: '40px', display: 'flex', gap: '20px' }}>
-                    <Button type="text" size="large" icon={<BehanceOutlined style={{ fontSize: '24px' }} />} style={{ color: 'white' }} />
-                    <Button type="text" size="large" icon={<LinkedinOutlined style={{ fontSize: '24px' }} />} style={{ color: 'white' }} />
-                    <Button type="text" size="large" icon={<GithubOutlined style={{ fontSize: '24px' }} />} style={{ color: 'white' }} />
-                  </div>
-                </div>
-              </Col>
-              <Col xs={24} lg={10}>
-                <div style={{
-                  background: 'rgba(255,255,255,0.1)',
-                  borderRadius: '20px',
-                  padding: '40px',
+        <section id="home" className="gradient-bg" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0', position: 'relative', overflow: 'hidden' }}>
+          {/* Animated Background Shapes */}
+          <div style={{ position: 'absolute', top: '15%', left: '10%', width: '100px', height: '100px', background: 'rgba(255,255,255,0.1)', borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70%', animation: 'float 6s ease-in-out infinite' }} />
+          <div style={{ position: 'absolute', bottom: '20%', right: '15%', width: '150px', height: '150px', background: 'rgba(255,255,255,0.08)', borderRadius: '63% 37% 54% 46% / 55% 48% 52% 45%', animation: 'float 8s ease-in-out infinite reverse' }} />
+          <div style={{ position: 'absolute', top: '50%', right: '5%', width: '80px', height: '80px', background: 'rgba(255,255,255,0.06)', borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70%', animation: 'float 7s ease-in-out infinite' }} />
+
+          <div style={{ maxWidth: 900, margin: '0 auto', textAlign: 'center', padding: '40px 24px', position: 'relative', zIndex: 1 }}>
+            {/* Avatar/Circle */}
+            <div className="pulse-avatar" style={{
+              width: '120px',
+              height: '120px',
+              margin: '0 auto 30px',
+              background: 'rgba(255,255,255,0.2)',
+              borderRadius: '50%',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              border: '3px solid rgba(255,255,255,0.4)',
+              fontSize: '48px',
+              backdropFilter: 'blur(10px)'
+            }}>
+              👩‍💻
+            </div>
+
+            {/* Name */}
+            <Title
+              level={1}
+              className="gradient-text"
+              style={{
+                fontSize: 'clamp(42px, 8vw, 72px)',
+                marginTop: '0',
+                marginBottom: '16px',
+                fontWeight: 800,
+                lineHeight: 1.1,
+                letterSpacing: '-2px',
+                textShadow: '0 0 40px rgba(255,255,255,0.3)'
+              }}
+            >
+              Drisana Dasgupta
+            </Title>
+
+            {/* Role Badge */}
+            <div style={{
+              display: 'inline-block',
+              background: 'white',
+              color: '#6366f1',
+              padding: '12px 32px',
+              borderRadius: '50px',
+              fontSize: '20px',
+              fontWeight: 700,
+              marginBottom: '28px',
+              boxShadow: '0 10px 30px rgba(0,0,0,0.2)'
+            }}>
+              UI/UX Designer
+            </div>
+
+            {/* Description */}
+            <Paragraph style={{
+              color: 'rgba(255,255,255,0.95)',
+              fontSize: '18px',
+              lineHeight: 1.8,
+              maxWidth: '650px',
+              margin: '0 auto 40px',
+              fontWeight: 400
+            }}>
+              Creative UI/UX Designer passionate about crafting intuitive, user-centered digital experiences.
+              Proficient in wireframing and prototyping using Figma and Adobe XD.
+            </Paragraph>
+
+            {/* Stats Row */}
+            <Row gutter={[24, 24]} style={{ marginBottom: '50px', maxWidth: '700px', margin: '0 auto 50px' }}>
+              <Col xs={12} sm={8}>
+                <div className="glow-card" style={{
+                  background: 'rgba(255,255,255,0.15)',
+                  padding: '20px',
+                  borderRadius: '16px',
                   backdropFilter: 'blur(10px)',
                   border: '1px solid rgba(255,255,255,0.2)'
                 }}>
-                  <div style={{ color: 'white', textAlign: 'center' }}>
-                    <EnvironmentOutlined style={{ fontSize: '48px', marginBottom: '20px' }} />
-                    <Title level={4} style={{ color: 'white', marginBottom: '10px' }}>Location</Title>
-                    <Text style={{ color: 'rgba(255,255,255,0.9)', fontSize: '16px' }}>Jalpaiguri, West Bengal</Text>
-                  </div>
-                  <Divider style={{ borderColor: 'rgba(255,255,255,0.2)', margin: '30px 0' }} />
-                  <div style={{ color: 'white', textAlign: 'center' }}>
-                    <PhoneOutlined style={{ fontSize: '48px', marginBottom: '20px' }} />
-                    <Title level={4} style={{ color: 'white', marginBottom: '10px' }}>Contact</Title>
-                    <Text style={{ color: 'rgba(255,255,255,0.9)', fontSize: '16px' }}>+91 89188 46865</Text>
-                  </div>
+                  <div style={{ fontSize: '32px', fontWeight: 700, color: 'white', marginBottom: '4px' }}>3+</div>
+                  <div style={{ fontSize: '14px', color: 'rgba(255,255,255,0.8)' }}>Projects</div>
+                </div>
+              </Col>
+              <Col xs={12} sm={8}>
+                <div className="glow-card" style={{
+                  background: 'rgba(255,255,255,0.15)',
+                  padding: '20px',
+                  borderRadius: '16px',
+                  backdropFilter: 'blur(10px)',
+                  border: '1px solid rgba(255,255,255,0.2)'
+                }}>
+                  <div style={{ fontSize: '32px', fontWeight: 700, color: 'white', marginBottom: '4px' }}>100%</div>
+                  <div style={{ fontSize: '14px', color: 'rgba(255,255,255,0.8)' }}>Dedicated</div>
+                </div>
+              </Col>
+              <Col xs={24} sm={8}>
+                <div className="glow-card" style={{
+                  background: 'rgba(255,255,255,0.15)',
+                  padding: '20px',
+                  borderRadius: '16px',
+                  backdropFilter: 'blur(10px)',
+                  border: '1px solid rgba(255,255,255,0.2)'
+                }}>
+                  <div style={{ fontSize: '32px', fontWeight: 700, color: 'white', marginBottom: '4px' }}>2024</div>
+                  <div style={{ fontSize: '14px', color: 'rgba(255,255,255,0.8)' }}>Graduate</div>
                 </div>
               </Col>
             </Row>
+
+            {/* CTA Buttons */}
+            <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '40px' }}>
+              <Button
+                type="primary"
+                size="large"
+                icon={<MailOutlined />}
+                onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
+                className="btn-shine"
+                style={{
+                  height: '54px',
+                  padding: '0 40px',
+                  fontSize: '16px',
+                  fontWeight: 600,
+                  background: 'white',
+                  color: '#6366f1',
+                  border: 'none',
+                  borderRadius: '27px',
+                  boxShadow: '0 8px 20px rgba(0,0,0,0.15)'
+                }}
+              >
+                Hire Me
+              </Button>
+
+              <Popover
+                content={
+                  <div style={{ width: '400px', height: '500px', maxWidth: '90vw' }}>
+                    <iframe
+                      src="/cv.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                      style={{ width: '100%', height: '100%', border: 'none', borderRadius: '8px' }}
+                      title="Resume Preview"
+                    />
+                  </div>
+                }
+                title={
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <span style={{ fontWeight: 600 }}>Resume Preview</span>
+                    <Button
+                      type="text"
+                      icon={<DownloadOutlined style={{ fontSize: '18px' }} />}
+                      href="/cv.pdf"
+                      download="Drisana_Dasgupta_CV.pdf"
+                      style={{ color: '#6366f1', display: 'flex', alignItems: 'center' }}
+                    />
+                  </div>
+                }
+                trigger="hover"
+                placement="bottom"
+              >
+                <Button
+                  size="large"
+                  icon={<DownloadOutlined />}
+                  href="/cv.pdf"
+                  download="Drisana_Dasgupta_CV.pdf"
+                  style={{
+                    height: '54px',
+                    padding: '0 40px',
+                    fontSize: '16px',
+                    fontWeight: 600,
+                    background: 'rgba(255,255,255,0.2)',
+                    color: 'white',
+                    border: '2px solid white',
+                    borderRadius: '27px'
+                  }}
+                >
+                  Download CV
+                </Button>
+              </Popover>
+            </div>
+
+            {/* Contact Info */}
+            <div style={{
+              display: 'flex',
+              gap: '32px',
+              justifyContent: 'center',
+              flexWrap: 'wrap',
+              marginBottom: '40px',
+              fontSize: '15px',
+              color: 'rgba(255,255,255,0.9)'
+            }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <EnvironmentOutlined style={{ fontSize: '18px' }} />
+                <span>Jalpaiguri, WB</span>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <PhoneOutlined style={{ fontSize: '18px' }} />
+                <span>+91 89188 46865</span>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <MailOutlined style={{ fontSize: '18px' }} />
+                <span>drisanadasgupta123789@gmail.com</span>
+              </div>
+            </div>
+
+            {/* Social Links */}
+            <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', alignItems: 'center' }}>
+              <Button
+                type="text"
+                icon={<BehanceOutlined style={{ fontSize: '24px' }} />}
+                style={{
+                  color: 'white',
+                  width: '50px',
+                  height: '50px',
+                  borderRadius: '50%',
+                  background: 'rgba(255,255,255,0.15)',
+                  border: '2px solid rgba(255,255,255,0.3)'
+                }}
+              />
+              <Button
+                type="text"
+                icon={<LinkedinOutlined style={{ fontSize: '24px' }} />}
+                style={{
+                  color: 'white',
+                  width: '50px',
+                  height: '50px',
+                  borderRadius: '50%',
+                  background: 'rgba(255,255,255,0.15)',
+                  border: '2px solid rgba(255,255,255,0.3)'
+                }}
+              />
+              <Button
+                type="text"
+                icon={<GithubOutlined style={{ fontSize: '24px' }} />}
+                style={{
+                  color: 'white',
+                  width: '50px',
+                  height: '50px',
+                  borderRadius: '50%',
+                  background: 'rgba(255,255,255,0.15)',
+                  border: '2px solid rgba(255,255,255,0.3)'
+                }}
+              />
+            </div>
           </div>
         </section>
 
