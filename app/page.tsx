@@ -350,85 +350,22 @@ export default function Home() {
                   {/* Contact Info */}
                   <div style={{
                     display: 'flex',
-                    gap: '32px',
-                    justifyContent: 'flex-start',
-                    flexWrap: 'wrap',
+                    flexDirection: 'column',
+                    gap: '16px',
                     marginBottom: '32px',
                     fontSize: '15px',
                     color: 'rgba(255,255,255,0.9)'
                   }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                       <EnvironmentOutlined style={{ fontSize: '18px' }} />
-                      <span>Jalpaiguri, WB</span>
+                      <span>Jalpaiguri, Darjeeling, West Bengal, India</span>
                     </div>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                      <PhoneOutlined style={{ fontSize: '18px' }} />
-                      <a href="tel:+918918846865" style={{ color: 'rgba(255,255,255,0.9)', textDecoration: 'none' }}>
-                        +91 89188 46865
-                      </a>
-                    </div>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                       <MailOutlined style={{ fontSize: '18px' }} />
                       <a href="mailto:drisanadasgupta123789@gmail.com" style={{ color: 'rgba(255,255,255,0.9)', textDecoration: 'none' }}>
                         drisanadasgupta123789@gmail.com
                       </a>
                     </div>
-                  </div>
-
-                  {/* Social Links */}
-                  <div style={{ display: 'flex', gap: '16px', alignItems: 'center', marginBottom: '32px' }}>
-                    <Button
-                      type="text"
-                      icon={<LinkedinOutlined style={{ fontSize: '24px', color: 'white' }} />}
-                      href="https://www.linkedin.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{
-                        width: '56px',
-                        height: '56px',
-                        borderRadius: '50%',
-                        background: '#0077B5',
-                        border: 'none',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        padding: 0
-                      }}
-                    />
-                    <Button
-                      type="text"
-                      icon={<MailOutlined style={{ fontSize: '24px', color: 'white' }} />}
-                      href="mailto:drisanadasgupta123789@gmail.com"
-                      style={{
-                        width: '56px',
-                        height: '56px',
-                        borderRadius: '50%',
-                        background: '#EA4335',
-                        border: 'none',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        padding: 0
-                      }}
-                    />
-                    <Button
-                      type="text"
-                      icon={<TwitterOutlined style={{ fontSize: '24px', color: 'white' }} />}
-                      href="https://twitter.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{
-                        width: '56px',
-                        height: '56px',
-                        borderRadius: '50%',
-                        background: '#000000',
-                        border: 'none',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        padding: 0
-                      }}
-                    />
                   </div>
                 </div>
               </Col>
