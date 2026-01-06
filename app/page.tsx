@@ -1,6 +1,6 @@
 'use client';
 
-import { Layout, Menu, Button, Row, Col, Card, Typography, Tag, Progress, Form, Input, message, FloatButton, Divider, Drawer, Popover } from 'antd';
+import { Layout, Menu, Button, Row, Col, Card, Typography, Tag, Progress, Form, Input, message, FloatButton, Divider, Drawer, Popover, Modal } from 'antd';
 import {
   HomeOutlined,
   UserOutlined,
@@ -21,6 +21,7 @@ import {
 } from '@ant-design/icons';
 import { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const { Header, Content, Footer } = Layout;
 const { Title, Paragraph, Text } = Typography;
@@ -62,6 +63,7 @@ export default function Home() {
 
   const projects = [
     {
+      id: 'e-commerce-mobile-app',
       title: 'E-Commerce Mobile App Redesign',
       year: '2024',
       image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=600&fit=crop',
@@ -74,6 +76,7 @@ export default function Home() {
       tags: ['Figma', 'Mobile Design', 'E-Commerce', 'UX Research']
     },
     {
+      id: 'restaurant-booking-website',
       title: 'Restaurant Booking Website UI',
       year: '2024',
       image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&fit=crop',
@@ -86,6 +89,7 @@ export default function Home() {
       tags: ['Responsive Design', 'Accessibility', 'Web Design', 'Adobe XD']
     },
     {
+      id: 'fitness-tracker-dashboard',
       title: 'Fitness Tracker Dashboard Concept',
       year: '2024',
       image: 'https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=800&h=600&fit=crop',
@@ -474,10 +478,11 @@ export default function Home() {
             <Row gutter={[32, 32]}>
               {projects.map((project, index) => (
                 <Col xs={24} lg={8} key={index}>
-                  <Card
-                    hoverable
-                    style={{ height: '100%', boxShadow: '0 4px 12px rgba(0,0,0,0.08)', borderRadius: '12px', overflow: 'hidden' }}
-                    cover={
+                  <Link href={`/project/${project.id}`} style={{ display: 'block', height: '100%' }}>
+                    <Card
+                      hoverable
+                      style={{ height: '100%', boxShadow: '0 4px 12px rgba(0,0,0,0.08)', borderRadius: '12px', overflow: 'hidden', cursor: 'pointer' }}
+                      cover={
                       <div style={{ position: 'relative', height: '220px', overflow: 'hidden' }}>
                         <Image
                           src={project.image}
@@ -507,6 +512,7 @@ export default function Home() {
                       ))}
                     </div>
                   </Card>
+                  </Link>
                 </Col>
               ))}
             </Row>
