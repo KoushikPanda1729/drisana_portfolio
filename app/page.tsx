@@ -330,8 +330,8 @@ export default function Home() {
                     <Button
                       size="large"
                       icon={<DownloadOutlined />}
-                      href="/cv.pdf"
-                      download="Drisana_Dasgupta_CV.pdf"
+                      href="/Drisana_Dasgupta_Resume.pdf"
+                      download="Drisana_Dasgupta_Resume.pdf"
                       style={{
                         height: '48px',
                         padding: '0 32px',
