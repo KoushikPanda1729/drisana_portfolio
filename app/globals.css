@@ -288,4 +288,32 @@ button:hover {
   #home .ant-col:last-child {
     padding: 0 !important;
   }
+
+  /* Education & Certifications mobile optimizations */
+  #education .ant-card {
+    padding: 20px !important;
+  }
+
+  #education .ant-card-body {
+    padding: 20px !important;
+  }
+
+  #education h2 {
+    font-size: 32px !important;
+    margin-bottom: 40px !important;
+  }
+
+  #education h3 {
+    font-size: 20px !important;
+  }
+
+  /* Adjust icon size on mobile */
+  #education .anticon {
+    font-size: 32px !important;
+  }
+
+  /* Better spacing for certification items */
+  #education .ant-typography {
+    font-size: 14px !important;
+  }
 }

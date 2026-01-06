@@ -66,7 +66,8 @@ export default function Home() {
       id: 'e-commerce-mobile-app',
       title: 'E-Commerce Mobile App Redesign',
       year: '2024',
-      image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=600&fit=crop',
+      image: '/project_image/cover_e-com.png',
+      figmaLink: 'https://www.figma.com/design/QcXlNFtzFchHCBDyN3uhv0/Kutuku----eCommerce-Mobile-App-UI-Kit-Figma-High-Quality-Template--Community-?node-id=2-68&t=SwvEkCl0BI8rt3c5-0',
       description: 'Redesigned e-commerce mobile interface with focus on streamlined navigation, reducing checkout steps from 5 to 3.',
       highlights: [
         'Developed high-fidelity interactive prototypes in Figma spanning 15+ screens',
@@ -79,7 +80,8 @@ export default function Home() {
       id: 'restaurant-booking-website',
       title: 'Restaurant Booking Website UI',
       year: '2024',
-      image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&fit=crop',
+      image: '/project_image/cover_restaurant .jpg',
+      figmaLink: 'https://www.figma.com/design/fGpvtRcKB1r3oonOCPHcRn/Table-Booking-Restaurant-Application--Web---Mobile---Admin-Panels---Community-?node-id=730-871&t=7PA7nW6QibTFrloQ-0',
       description: 'Designed fully responsive website from low-fidelity wireframes to polished high-fidelity mockups.',
       highlights: [
         'Established comprehensive style guide including typography and color palette',
@@ -92,7 +94,8 @@ export default function Home() {
       id: 'fitness-tracker-dashboard',
       title: 'Fitness Tracker Dashboard Concept',
       year: '2024',
-      image: 'https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=800&h=600&fit=crop',
+      image: '/project_image/cover-fitness.png',
+      figmaLink: 'https://www.figma.com/design/ZsqU0poarVR9jDqPIgrjiI/Fitness-Tracker-Dashboard--Community-?node-id=2-499&t=HMnmPNVVRzUOvNPC-0',
       description: 'Designed data-rich dashboard with focus on information hierarchy and scannable layouts.',
       highlights: [
         'Created user personas to guide design decisions',
@@ -650,40 +653,68 @@ export default function Home() {
             <Row gutter={[32, 32]}>
               <Col xs={24} lg={12}>
                 <Card
-                  style={{ height: '100%', boxShadow: '0 4px 12px rgba(0,0,0,0.08)' }}
+                  style={{
+                    height: '100%',
+                    boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
+                    borderRadius: '12px',
+                    border: '1px solid #f0f0f0'
+                  }}
                 >
-                  <BookOutlined style={{ fontSize: '48px', color: '#6366f1', marginBottom: '20px' }} />
-                  <Title level={3}>Bachelor of Arts (B.A)</Title>
-                  <Text style={{ fontSize: '16px', color: '#6b7280', display: 'block', marginBottom: '8px' }}>
-                    A.C College, Jalpaiguri
-                  </Text>
-                  <Text style={{ fontSize: '16px', color: '#6b7280', display: 'block', marginBottom: '8px' }}>
-                    University of North Bengal (NBU)
-                  </Text>
-                  <Tag color="blue" style={{ marginTop: '12px' }}>2021 - 2024</Tag>
-                  <Tag color="green">62.66%</Tag>
+                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '16px' }}>
+                    <BookOutlined style={{ fontSize: '40px', color: '#6366f1', marginTop: '4px' }} />
+                    <div style={{ flex: 1 }}>
+                      <Title level={3} style={{ marginBottom: '12px', fontSize: '22px' }}>
+                        Bachelor of Arts (B.A)
+                      </Title>
+                      <Text style={{ fontSize: '15px', color: '#4b5563', display: 'block', marginBottom: '4px' }}>
+                        A.C College, Jalpaiguri
+                      </Text>
+                      <Text style={{ fontSize: '15px', color: '#6b7280', display: 'block', marginBottom: '16px' }}>
+                        University of North Bengal (NBU)
+                      </Text>
+                      <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+                        <Tag color="blue" style={{ margin: 0, fontSize: '13px', padding: '4px 12px' }}>
+                          2021 - 2024
+                        </Tag>
+                        <Tag color="green" style={{ margin: 0, fontSize: '13px', padding: '4px 12px' }}>
+                          62.66%
+                        </Tag>
+                      </div>
+                    </div>
+                  </div>
                 </Card>
               </Col>
               <Col xs={24} lg={12}>
                 <Card
-                  style={{ height: '100%', boxShadow: '0 4px 12px rgba(0,0,0,0.08)' }}
+                  style={{
+                    height: '100%',
+                    boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
+                    borderRadius: '12px',
+                    border: '1px solid #f0f0f0'
+                  }}
                 >
-                  <TrophyOutlined style={{ fontSize: '48px', color: '#6366f1', marginBottom: '20px' }} />
-                  <Title level={3}>Certifications & Training</Title>
-                  <div style={{ marginTop: '20px' }}>
-                    <div style={{ marginBottom: '20px' }}>
-                      <CheckCircleOutlined style={{ color: '#10b981', marginRight: '8px' }} />
-                      <Text strong>UI/UX Design Self-Learning</Text>
-                      <br />
-                      <Text type="secondary" style={{ marginLeft: '24px' }}>
+                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '16px', marginBottom: '24px' }}>
+                    <TrophyOutlined style={{ fontSize: '40px', color: '#6366f1', marginTop: '4px' }} />
+                    <Title level={3} style={{ marginBottom: 0, fontSize: '22px' }}>
+                      Certifications & Training
+                    </Title>
+                  </div>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+                    <div>
+                      <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '6px' }}>
+                        <CheckCircleOutlined style={{ color: '#10b981', fontSize: '16px', marginTop: '3px' }} />
+                        <Text strong style={{ fontSize: '15px' }}>UI/UX Design Self-Learning</Text>
+                      </div>
+                      <Text style={{ fontSize: '14px', color: '#6b7280', display: 'block', marginLeft: '24px', lineHeight: '1.5' }}>
                         Ongoing via online platforms, design communities (Dribbble, Behance), and YouTube
                       </Text>
                     </div>
                     <div>
-                      <CheckCircleOutlined style={{ color: '#10b981', marginRight: '8px' }} />
-                      <Text strong>Diploma in Financial Accounting (DFA)</Text>
-                      <br />
-                      <Text type="secondary" style={{ marginLeft: '24px' }}>
+                      <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '6px' }}>
+                        <CheckCircleOutlined style={{ color: '#10b981', fontSize: '16px', marginTop: '3px' }} />
+                        <Text strong style={{ fontSize: '15px' }}>Diploma in Financial Accounting (DFA)</Text>
+                      </div>
+                      <Text style={{ fontSize: '14px', color: '#6b7280', display: 'block', marginLeft: '24px', lineHeight: '1.5' }}>
                         1 Year - Tally ERP 9 & Prime (GST billing, financial reporting)
                       </Text>
                     </div>
@@ -703,10 +734,22 @@ export default function Home() {
             UI/UX Designer | Creating Beautiful & Functional Digital Experiences
           </Paragraph>
           <div style={{ margin: '30px 0', display: 'flex', gap: '20px', justifyContent: 'center' }}>
-            <Button type="text" size="large" icon={<BehanceOutlined style={{ fontSize: '24px' }} />} style={{ color: 'white' }} />
-            <Button type="text" size="large" icon={<LinkedinOutlined style={{ fontSize: '24px' }} />} style={{ color: 'white' }} />
-            <Button type="text" size="large" icon={<GithubOutlined style={{ fontSize: '24px' }} />} style={{ color: 'white' }} />
-            <Button type="text" size="large" icon={<MailOutlined style={{ fontSize: '24px' }} />} style={{ color: 'white' }} />
+            <Button
+              type="text"
+              size="large"
+              icon={<LinkedinOutlined style={{ fontSize: '24px' }} />}
+              href="https://www.linkedin.com/in/drisana-dasgupta-6b81a83a5/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: 'white' }}
+            />
+            <Button
+              type="text"
+              size="large"
+              icon={<MailOutlined style={{ fontSize: '24px' }} />}
+              href="mailto:drisanadasgupta123789@gmail.com"
+              style={{ color: 'white' }}
+            />
           </div>
           <Divider style={{ borderColor: 'rgba(255,255,255,0.2)' }} />
           <Text style={{ color: 'rgba(255,255,255,0.6)' }}>

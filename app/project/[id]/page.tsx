@@ -13,7 +13,8 @@ const projects = [
     id: 'e-commerce-mobile-app',
     title: 'E-Commerce Mobile App Redesign',
     year: '2024',
-    image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=600&fit=crop',
+    image: '/project_image/cover_e-com.png',
+    figmaLink: 'https://www.figma.com/design/QcXlNFtzFchHCBDyN3uhv0/Kutuku----eCommerce-Mobile-App-UI-Kit-Figma-High-Quality-Template--Community-?node-id=2-68&t=SwvEkCl0BI8rt3c5-0',
     description: 'Redesigned e-commerce mobile interface with focus on streamlined navigation, reducing checkout steps from 5 to 3.',
     highlights: [
       'Developed high-fidelity interactive prototypes in Figma spanning 15+ screens',
@@ -29,7 +30,8 @@ const projects = [
     id: 'restaurant-booking-website',
     title: 'Restaurant Booking Website UI',
     year: '2024',
-    image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&fit=crop',
+    image: '/project_image/cover_restaurant .jpg',
+    figmaLink: 'https://www.figma.com/design/fGpvtRcKB1r3oonOCPHcRn/Table-Booking-Restaurant-Application--Web---Mobile---Admin-Panels---Community-?node-id=730-871&t=7PA7nW6QibTFrloQ-0',
     description: 'Designed fully responsive website from low-fidelity wireframes to polished high-fidelity mockups.',
     highlights: [
       'Established comprehensive style guide including typography and color palette',
@@ -45,7 +47,8 @@ const projects = [
     id: 'fitness-tracker-dashboard',
     title: 'Fitness Tracker Dashboard Concept',
     year: '2024',
-    image: 'https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=800&h=600&fit=crop',
+    image: '/project_image/cover-fitness.png',
+    figmaLink: 'https://www.figma.com/design/ZsqU0poarVR9jDqPIgrjiI/Fitness-Tracker-Dashboard--Community-?node-id=2-499&t=HMnmPNVVRzUOvNPC-0',
     description: 'Designed data-rich dashboard with focus on information hierarchy and scannable layouts.',
     highlights: [
       'Created user personas to guide design decisions',
@@ -150,6 +153,26 @@ export default function ProjectDetail() {
                   </span>
                 ))}
               </div>
+
+              <Button
+                type="primary"
+                size="large"
+                href={project.figmaLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  height: '48px',
+                  padding: '0 32px',
+                  fontSize: '16px',
+                  fontWeight: 600,
+                  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                  border: 'none',
+                  borderRadius: '8px',
+                  boxShadow: '0 4px 12px rgba(102, 126, 234, 0.3)'
+                }}
+              >
+                View on Figma
+              </Button>
             </Col>
           </Row>
 
