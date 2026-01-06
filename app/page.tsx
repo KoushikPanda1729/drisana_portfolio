@@ -154,16 +154,37 @@ export default function Home() {
             className="mobile-menu-button"
           />
 
-          <div style={{
-            fontWeight: 700,
-            fontSize: '24px',
-            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text',
-            letterSpacing: '-0.5px'
+          <div className="nav-signature-wrapper" style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '4px',
+            fontSize: '28px',
+            color: '#1e3a8a'
           }}>
-            Drisana Dasgupta
+            <span className="bracket" style={{
+              fontWeight: 400,
+              fontSize: '24px',
+              color: '#667eea',
+              opacity: 0.7
+            }}>&lt;</span>
+            <span className="signature-font" style={{
+              fontSize: '32px',
+              letterSpacing: '0.5px',
+              background: 'linear-gradient(135deg, #1e3a8a 0%, #667eea 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+              paddingTop: '4px',
+              whiteSpace: 'nowrap'
+            }}>
+              Drisana Dasgupta
+            </span>
+            <span className="bracket" style={{
+              fontWeight: 400,
+              fontSize: '24px',
+              color: '#667eea',
+              opacity: 0.7
+            }}>/&gt;</span>
           </div>
         </div>
 
@@ -200,247 +221,196 @@ export default function Home() {
 
       <Content>
         {/* Hero Section */}
-        <section id="home" className="gradient-bg" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0', position: 'relative', overflow: 'hidden' }}>
+        <section id="home" className="gradient-bg" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '60px 24px', position: 'relative', overflow: 'hidden' }}>
           {/* Animated Background Shapes */}
           <div style={{ position: 'absolute', top: '15%', left: '10%', width: '100px', height: '100px', background: 'rgba(255,255,255,0.1)', borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70%', animation: 'float 6s ease-in-out infinite' }} />
           <div style={{ position: 'absolute', bottom: '20%', right: '15%', width: '150px', height: '150px', background: 'rgba(255,255,255,0.08)', borderRadius: '63% 37% 54% 46% / 55% 48% 52% 45%', animation: 'float 8s ease-in-out infinite reverse' }} />
           <div style={{ position: 'absolute', top: '50%', right: '5%', width: '80px', height: '80px', background: 'rgba(255,255,255,0.06)', borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70%', animation: 'float 7s ease-in-out infinite' }} />
 
-          <div style={{ maxWidth: 900, margin: '0 auto', textAlign: 'center', padding: '40px 24px', position: 'relative', zIndex: 1 }}>
-            {/* Avatar/Circle */}
-            <div className="pulse-avatar" style={{
-              width: '120px',
-              height: '120px',
-              margin: '0 auto 30px',
-              background: 'rgba(255,255,255,0.2)',
-              borderRadius: '50%',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              border: '3px solid rgba(255,255,255,0.4)',
-              fontSize: '48px',
-              backdropFilter: 'blur(10px)'
-            }}>
-              👩‍💻
-            </div>
+          <div style={{ maxWidth: 1400, width: '100%', margin: '0 auto', position: 'relative', zIndex: 1 }}>
+            <Row gutter={[64, 48]} align="middle">
+              {/* Left Column - Text Content */}
+              <Col xs={24} lg={12}>
+                <div style={{ maxWidth: '600px' }}>
+                  {/* Hello Badge */}
+                  <div style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '8px',
+                    background: 'rgba(255,255,255,0.2)',
+                    backdropFilter: 'blur(10px)',
+                    padding: '10px 24px',
+                    borderRadius: '50px',
+                    marginBottom: '32px',
+                    border: '1px solid rgba(255,255,255,0.3)'
+                  }}>
+                    <span style={{ fontSize: '20px' }}>👋</span>
+                    <Text style={{ color: 'white', fontSize: '16px', fontWeight: 600, letterSpacing: '1px' }}>
+                      HELLO THERE
+                    </Text>
+                  </div>
 
-            {/* Name */}
-            <Title
-              level={1}
-              className="gradient-text"
-              style={{
-                fontSize: 'clamp(42px, 8vw, 72px)',
-                marginTop: '0',
-                marginBottom: '16px',
-                fontWeight: 800,
-                lineHeight: 1.1,
-                letterSpacing: '-2px',
-                textShadow: '0 0 40px rgba(255,255,255,0.3)'
-              }}
-            >
-              Drisana Dasgupta
-            </Title>
+                  {/* Name */}
+                  <Title
+                    level={1}
+                    style={{
+                      fontSize: 'clamp(48px, 6vw, 72px)',
+                      marginTop: '0',
+                      marginBottom: '24px',
+                      fontWeight: 800,
+                      lineHeight: 1.1,
+                      letterSpacing: '-2px',
+                      color: 'white',
+                      textShadow: '0 2px 20px rgba(0,0,0,0.1)'
+                    }}
+                  >
+                    I&apos;m Drisana Dasgupta
+                  </Title>
 
-            {/* Role Badge */}
-            <div style={{
-              display: 'inline-block',
-              background: 'white',
-              color: '#6366f1',
-              padding: '12px 32px',
-              borderRadius: '50px',
-              fontSize: '20px',
-              fontWeight: 700,
-              marginBottom: '28px',
-              boxShadow: '0 10px 30px rgba(0,0,0,0.2)'
-            }}>
-              UI/UX Designer
-            </div>
+                  {/* Role */}
+                  <Title
+                    level={2}
+                    style={{
+                      fontSize: 'clamp(24px, 3vw, 32px)',
+                      marginTop: '0',
+                      marginBottom: '24px',
+                      fontWeight: 400,
+                      color: 'rgba(255,255,255,0.95)',
+                      letterSpacing: '-0.5px'
+                    }}
+                  >
+                    Creative UI/UX Designer
+                  </Title>
 
-            {/* Description */}
-            <Paragraph style={{
-              color: 'rgba(255,255,255,0.95)',
-              fontSize: '18px',
-              lineHeight: 1.8,
-              maxWidth: '650px',
-              margin: '0 auto 40px',
-              fontWeight: 400
-            }}>
-              Creative UI/UX Designer passionate about crafting intuitive, user-centered digital experiences.
-              Proficient in wireframing and prototyping using Figma and Adobe XD.
-            </Paragraph>
+                  {/* Description */}
+                  <Paragraph style={{
+                    color: 'rgba(255,255,255,0.9)',
+                    fontSize: '17px',
+                    lineHeight: 1.7,
+                    marginBottom: '40px',
+                    fontWeight: 400
+                  }}>
+                    Crafting intuitive and beautiful digital experiences through user-centered design. Specialized in wireframing, prototyping, and bringing ideas to life.
+                  </Paragraph>
 
-            {/* Stats Row */}
-            <Row gutter={[24, 24]} style={{ marginBottom: '50px', maxWidth: '700px', margin: '0 auto 50px' }}>
-              <Col xs={12} sm={8}>
-                <div className="glow-card" style={{
-                  background: 'rgba(255,255,255,0.15)',
-                  padding: '20px',
-                  borderRadius: '16px',
-                  backdropFilter: 'blur(10px)',
-                  border: '1px solid rgba(255,255,255,0.2)'
-                }}>
-                  <div style={{ fontSize: '32px', fontWeight: 700, color: 'white', marginBottom: '4px' }}>3+</div>
-                  <div style={{ fontSize: '14px', color: 'rgba(255,255,255,0.8)' }}>Projects</div>
+                  {/* CTA Buttons */}
+                  <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', marginBottom: '48px' }}>
+                    <Button
+                      type="primary"
+                      size="large"
+                      onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
+                      className="btn-shine"
+                      style={{
+                        height: '56px',
+                        padding: '0 40px',
+                        fontSize: '16px',
+                        fontWeight: 600,
+                        background: 'white',
+                        color: '#6366f1',
+                        border: 'none',
+                        borderRadius: '28px',
+                        boxShadow: '0 10px 30px rgba(0,0,0,0.2)'
+                      }}
+                    >
+                      Let&apos;s Work Together
+                    </Button>
+
+                    <Button
+                      size="large"
+                      icon={<DownloadOutlined />}
+                      href="/cv.pdf"
+                      download="Drisana_Dasgupta_CV.pdf"
+                      style={{
+                        height: '56px',
+                        padding: '0 40px',
+                        fontSize: '16px',
+                        fontWeight: 600,
+                        background: 'transparent',
+                        color: 'white',
+                        border: '2px solid white',
+                        borderRadius: '28px'
+                      }}
+                    >
+                      Download CV
+                    </Button>
+                  </div>
+
+                  {/* Social Links */}
+                  <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
+                    <Button
+                      type="text"
+                      icon={<BehanceOutlined style={{ fontSize: '20px' }} />}
+                      href="https://www.behance.net"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        color: 'white',
+                        width: '48px',
+                        height: '48px',
+                        borderRadius: '50%',
+                        background: 'rgba(255,255,255,0.15)',
+                        border: '1px solid rgba(255,255,255,0.3)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center'
+                      }}
+                    />
+                    <Button
+                      type="text"
+                      icon={<LinkedinOutlined style={{ fontSize: '20px' }} />}
+                      href="https://www.linkedin.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        color: 'white',
+                        width: '48px',
+                        height: '48px',
+                        borderRadius: '50%',
+                        background: 'rgba(255,255,255,0.15)',
+                        border: '1px solid rgba(255,255,255,0.3)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center'
+                      }}
+                    />
+                  </div>
                 </div>
               </Col>
-              <Col xs={12} sm={8}>
-                <div className="glow-card" style={{
-                  background: 'rgba(255,255,255,0.15)',
-                  padding: '20px',
-                  borderRadius: '16px',
-                  backdropFilter: 'blur(10px)',
-                  border: '1px solid rgba(255,255,255,0.2)'
+
+              {/* Right Column - Photo Card */}
+              <Col xs={24} lg={12}>
+                <div style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center'
                 }}>
-                  <div style={{ fontSize: '32px', fontWeight: 700, color: 'white', marginBottom: '4px' }}>100%</div>
-                  <div style={{ fontSize: '14px', color: 'rgba(255,255,255,0.8)' }}>Dedicated</div>
-                </div>
-              </Col>
-              <Col xs={24} sm={8}>
-                <div className="glow-card" style={{
-                  background: 'rgba(255,255,255,0.15)',
-                  padding: '20px',
-                  borderRadius: '16px',
-                  backdropFilter: 'blur(10px)',
-                  border: '1px solid rgba(255,255,255,0.2)'
-                }}>
-                  <div style={{ fontSize: '32px', fontWeight: 700, color: 'white', marginBottom: '4px' }}>2024</div>
-                  <div style={{ fontSize: '14px', color: 'rgba(255,255,255,0.8)' }}>Graduate</div>
+                  <div style={{
+                    background: '#f5e6d3',
+                    borderRadius: '32px',
+                    padding: '24px',
+                    boxShadow: '0 20px 60px rgba(0,0,0,0.3)',
+                    maxWidth: '500px',
+                    width: '100%'
+                  }}>
+                    <div style={{
+                      position: 'relative',
+                      width: '100%',
+                      aspectRatio: '3/4',
+                      borderRadius: '24px',
+                      overflow: 'hidden'
+                    }}>
+                      <Image
+                        src="/designer-illustration.png"
+                        alt="Drisana Dasgupta"
+                        fill
+                        style={{ objectFit: 'cover' }}
+                        priority
+                      />
+                    </div>
+                  </div>
                 </div>
               </Col>
             </Row>
-
-            {/* CTA Buttons */}
-            <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '40px' }}>
-              <Button
-                type="primary"
-                size="large"
-                icon={<MailOutlined />}
-                onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
-                className="btn-shine"
-                style={{
-                  height: '54px',
-                  padding: '0 40px',
-                  fontSize: '16px',
-                  fontWeight: 600,
-                  background: 'white',
-                  color: '#6366f1',
-                  border: 'none',
-                  borderRadius: '27px',
-                  boxShadow: '0 8px 20px rgba(0,0,0,0.15)'
-                }}
-              >
-                Hire Me
-              </Button>
-
-              <Popover
-                content={
-                  <div style={{ width: '400px', height: '500px', maxWidth: '90vw' }}>
-                    <iframe
-                      src="/cv.pdf#toolbar=0&navpanes=0&scrollbar=0"
-                      style={{ width: '100%', height: '100%', border: 'none', borderRadius: '8px' }}
-                      title="Resume Preview"
-                    />
-                  </div>
-                }
-                title={
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <span style={{ fontWeight: 600 }}>Resume Preview</span>
-                    <Button
-                      type="text"
-                      icon={<DownloadOutlined style={{ fontSize: '18px' }} />}
-                      href="/cv.pdf"
-                      download="Drisana_Dasgupta_CV.pdf"
-                      style={{ color: '#6366f1', display: 'flex', alignItems: 'center' }}
-                    />
-                  </div>
-                }
-                trigger="hover"
-                placement="bottom"
-              >
-                <Button
-                  size="large"
-                  icon={<DownloadOutlined />}
-                  href="/cv.pdf"
-                  download="Drisana_Dasgupta_CV.pdf"
-                  style={{
-                    height: '54px',
-                    padding: '0 40px',
-                    fontSize: '16px',
-                    fontWeight: 600,
-                    background: 'rgba(255,255,255,0.2)',
-                    color: 'white',
-                    border: '2px solid white',
-                    borderRadius: '27px'
-                  }}
-                >
-                  Download CV
-                </Button>
-              </Popover>
-            </div>
-
-            {/* Contact Info */}
-            <div style={{
-              display: 'flex',
-              gap: '32px',
-              justifyContent: 'center',
-              flexWrap: 'wrap',
-              marginBottom: '40px',
-              fontSize: '15px',
-              color: 'rgba(255,255,255,0.9)'
-            }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <EnvironmentOutlined style={{ fontSize: '18px' }} />
-                <span>Jalpaiguri, WB</span>
-              </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <PhoneOutlined style={{ fontSize: '18px' }} />
-                <span>+91 89188 46865</span>
-              </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <MailOutlined style={{ fontSize: '18px' }} />
-                <span>drisanadasgupta123789@gmail.com</span>
-              </div>
-            </div>
-
-            {/* Social Links */}
-            <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', alignItems: 'center' }}>
-              <Button
-                type="text"
-                icon={<BehanceOutlined style={{ fontSize: '24px' }} />}
-                style={{
-                  color: 'white',
-                  width: '50px',
-                  height: '50px',
-                  borderRadius: '50%',
-                  background: 'rgba(255,255,255,0.15)',
-                  border: '2px solid rgba(255,255,255,0.3)'
-                }}
-              />
-              <Button
-                type="text"
-                icon={<LinkedinOutlined style={{ fontSize: '24px' }} />}
-                style={{
-                  color: 'white',
-                  width: '50px',
-                  height: '50px',
-                  borderRadius: '50%',
-                  background: 'rgba(255,255,255,0.15)',
-                  border: '2px solid rgba(255,255,255,0.3)'
-                }}
-              />
-              <Button
-                type="text"
-                icon={<GithubOutlined style={{ fontSize: '24px' }} />}
-                style={{
-                  color: 'white',
-                  width: '50px',
-                  height: '50px',
-                  borderRadius: '50%',
-                  background: 'rgba(255,255,255,0.15)',
-                  border: '2px solid rgba(255,255,255,0.3)'
-                }}
-              />
-            </div>
           </div>
         </section>
 

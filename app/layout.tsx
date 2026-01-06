@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Kaushan_Script } from "next/font/google";
 import "./globals.css";
 import { AntdRegistry } from '@ant-design/nextjs-registry';
 import { ConfigProvider } from 'antd';
@@ -8,6 +8,13 @@ import { personSchema, websiteSchema } from './schema';
 const inter = Inter({
   subsets: ["latin"],
   display: 'swap',
+});
+
+const kaushanScript = Kaushan_Script({
+  weight: '400',
+  subsets: ["latin"],
+  display: 'swap',
+  variable: '--font-signature',
 });
 
 export const metadata: Metadata = {
@@ -57,7 +64,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.className} ${kaushanScript.variable}`}>
         <AntdRegistry>
           <ConfigProvider
             theme={{

@@ -148,6 +148,12 @@ button:hover {
   display: flex !important;
 }
 
+
+/* Signature font */
+.signature-font {
+  font-family: var(--font-signature);
+}
+
 @media (max-width: 768px) {
   .section-padding {
     padding: 60px 16px;
@@ -163,5 +169,18 @@ button:hover {
 
   header {
     padding: 0 20px !important;
+  }
+
+  /* Mobile navbar signature styling */
+  .nav-signature-wrapper {
+    font-size: 20px !important;
+  }
+
+  .nav-signature-wrapper .signature-font {
+    font-size: 22px !important;
+  }
+
+  .nav-signature-wrapper .bracket {
+    font-size: 18px !important;
   }
 }
