@@ -231,7 +231,7 @@ export default function Home() {
 
       <Content>
         {/* Hero Section */}
-        <section id="home" className="gradient-bg" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '60px 24px', position: 'relative', overflow: 'hidden' }}>
+        <section id="home" className="gradient-bg" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '60px 50px', position: 'relative', overflow: 'hidden' }}>
           {/* Animated Background Shapes */}
           <div style={{ position: 'absolute', top: '15%', left: '10%', width: '100px', height: '100px', background: 'rgba(255,255,255,0.1)', borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70%', animation: 'float 6s ease-in-out infinite' }} />
           <div style={{ position: 'absolute', bottom: '20%', right: '15%', width: '150px', height: '150px', background: 'rgba(255,255,255,0.08)', borderRadius: '63% 37% 54% 46% / 55% 48% 52% 45%', animation: 'float 8s ease-in-out infinite reverse' }} />
