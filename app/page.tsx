@@ -11,6 +11,7 @@ import {
   GithubOutlined,
   LinkedinOutlined,
   BehanceOutlined,
+  TwitterOutlined,
   EnvironmentOutlined,
   PhoneOutlined,
   ArrowUpOutlined,
@@ -37,7 +38,6 @@ export default function Home() {
     { key: 'projects', icon: <ProjectOutlined />, label: 'Projects', href: '#projects' },
     { key: 'skills', icon: <ToolOutlined />, label: 'Skills', href: '#skills' },
     { key: 'education', icon: <BookOutlined />, label: 'Education', href: '#education' },
-    { key: 'contact', icon: <MailOutlined />, label: 'Contact', href: '#contact' },
   ];
 
   const handleMenuClick = (e: { key: string }) => {
@@ -197,11 +197,14 @@ export default function Home() {
           mode="horizontal"
           items={menuItems}
           onClick={handleMenuClick}
+          overflowedIndicator={null}
           style={{
             border: 'none',
             background: 'transparent',
             fontSize: '15px',
-            fontWeight: 500
+            fontWeight: 500,
+            flex: 1,
+            justifyContent: 'flex-end'
           }}
           className="desktop-menu"
         />
@@ -302,7 +305,7 @@ export default function Home() {
                     <Button
                       type="primary"
                       size="large"
-                      onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
+                      href="mailto:drisanadasgupta123789@gmail.com"
                       className="btn-shine"
                       style={{
                         height: '56px',
@@ -329,52 +332,115 @@ export default function Home() {
                         padding: '0 40px',
                         fontSize: '16px',
                         fontWeight: 600,
-                        background: 'transparent',
+                        background: 'rgba(255,255,255,0.1)',
                         color: 'white',
-                        border: '2px solid white',
-                        borderRadius: '28px'
+                        border: '2px solid rgba(255,255,255,0.4)',
+                        borderRadius: '12px',
+                        backdropFilter: 'blur(10px)'
                       }}
                     >
-                      Download CV
+                      Download Resume
                     </Button>
                   </div>
 
+                  {/* Contact Info */}
+                  <div style={{
+                    display: 'flex',
+                    gap: '32px',
+                    justifyContent: 'flex-start',
+                    flexWrap: 'wrap',
+                    marginBottom: '32px',
+                    fontSize: '15px',
+                    color: 'rgba(255,255,255,0.9)'
+                  }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                      <EnvironmentOutlined style={{ fontSize: '18px' }} />
+                      <span>Jalpaiguri, WB</span>
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                      <PhoneOutlined style={{ fontSize: '18px' }} />
+                      <a href="tel:+918918846865" style={{ color: 'rgba(255,255,255,0.9)', textDecoration: 'none' }}>
+                        +91 89188 46865
+                      </a>
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                      <MailOutlined style={{ fontSize: '18px' }} />
+                      <a href="mailto:drisanadasgupta123789@gmail.com" style={{ color: 'rgba(255,255,255,0.9)', textDecoration: 'none' }}>
+                        drisanadasgupta123789@gmail.com
+                      </a>
+                    </div>
+                  </div>
+
                   {/* Social Links */}
-                  <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
+                  <div style={{ display: 'flex', gap: '16px', alignItems: 'center', marginBottom: '32px' }}>
                     <Button
                       type="text"
-                      icon={<BehanceOutlined style={{ fontSize: '20px' }} />}
-                      href="https://www.behance.net"
+                      icon={<GithubOutlined style={{ fontSize: '24px', color: 'white' }} />}
+                      href="https://github.com"
                       target="_blank"
                       rel="noopener noreferrer"
                       style={{
-                        color: 'white',
-                        width: '48px',
-                        height: '48px',
+                        width: '56px',
+                        height: '56px',
                         borderRadius: '50%',
-                        background: 'rgba(255,255,255,0.15)',
-                        border: '1px solid rgba(255,255,255,0.3)',
+                        background: '#1a1a1a',
+                        border: 'none',
                         display: 'flex',
                         alignItems: 'center',
-                        justifyContent: 'center'
+                        justifyContent: 'center',
+                        padding: 0
                       }}
                     />
                     <Button
                       type="text"
-                      icon={<LinkedinOutlined style={{ fontSize: '20px' }} />}
+                      icon={<LinkedinOutlined style={{ fontSize: '24px', color: 'white' }} />}
                       href="https://www.linkedin.com"
                       target="_blank"
                       rel="noopener noreferrer"
                       style={{
-                        color: 'white',
-                        width: '48px',
-                        height: '48px',
+                        width: '56px',
+                        height: '56px',
                         borderRadius: '50%',
-                        background: 'rgba(255,255,255,0.15)',
-                        border: '1px solid rgba(255,255,255,0.3)',
+                        background: '#0077B5',
+                        border: 'none',
                         display: 'flex',
                         alignItems: 'center',
-                        justifyContent: 'center'
+                        justifyContent: 'center',
+                        padding: 0
+                      }}
+                    />
+                    <Button
+                      type="text"
+                      icon={<MailOutlined style={{ fontSize: '24px', color: 'white' }} />}
+                      href="mailto:drisanadasgupta123789@gmail.com"
+                      style={{
+                        width: '56px',
+                        height: '56px',
+                        borderRadius: '50%',
+                        background: '#EA4335',
+                        border: 'none',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        padding: 0
+                      }}
+                    />
+                    <Button
+                      type="text"
+                      icon={<TwitterOutlined style={{ fontSize: '24px', color: 'white' }} />}
+                      href="https://twitter.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        width: '56px',
+                        height: '56px',
+                        borderRadius: '50%',
+                        background: '#000000',
+                        border: 'none',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        padding: 0
                       }}
                     />
                   </div>
@@ -404,7 +470,7 @@ export default function Home() {
                       overflow: 'hidden'
                     }}>
                       <Image
-                        src="/designer-illustration.png"
+                        src="/designer-illustration.jpeg"
                         alt="Drisana Dasgupta"
                         fill
                         style={{ objectFit: 'cover' }}
@@ -634,84 +700,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Contact Section */}
-        <section id="contact" className="section-padding" style={{ background: '#f9fafb' }}>
-          <div style={{ maxWidth: 800, margin: '0 auto' }}>
-            <Title level={2} style={{ textAlign: 'center', marginBottom: '20px', fontSize: '42px' }}>
-              Get In Touch
-            </Title>
-            <Paragraph style={{ textAlign: 'center', fontSize: '18px', color: '#6b7280', marginBottom: '60px' }}>
-              Have a project in mind? Let&apos;s work together!
-            </Paragraph>
-            <Card style={{ boxShadow: '0 4px 12px rgba(0,0,0,0.08)' }}>
-              <Form
-                form={form}
-                layout="vertical"
-                onFinish={onFinish}
-                size="large"
-              >
-                <Row gutter={16}>
-                  <Col xs={24} sm={12}>
-                    <Form.Item
-                      label="Name"
-                      name="name"
-                      rules={[{ required: true, message: 'Please enter your name' }]}
-                    >
-                      <Input placeholder="Your Name" />
-                    </Form.Item>
-                  </Col>
-                  <Col xs={24} sm={12}>
-                    <Form.Item
-                      label="Email"
-                      name="email"
-                      rules={[
-                        { required: true, message: 'Please enter your email' },
-                        { type: 'email', message: 'Please enter a valid email' }
-                      ]}
-                    >
-                      <Input placeholder="your.email@example.com" />
-                    </Form.Item>
-                  </Col>
-                </Row>
-                <Form.Item
-                  label="Subject"
-                  name="subject"
-                  rules={[{ required: true, message: 'Please enter a subject' }]}
-                >
-                  <Input placeholder="Project Inquiry" />
-                </Form.Item>
-                <Form.Item
-                  label="Message"
-                  name="message"
-                  rules={[{ required: true, message: 'Please enter your message' }]}
-                >
-                  <TextArea rows={6} placeholder="Tell me about your project..." />
-                </Form.Item>
-                <Form.Item>
-                  <Button type="primary" htmlType="submit" size="large" block icon={<MailOutlined />}>
-                    Send Message
-                  </Button>
-                </Form.Item>
-              </Form>
-              <Divider />
-              <div style={{ textAlign: 'center' }}>
-                <Title level={4}>Direct Contact</Title>
-                <Paragraph>
-                  <MailOutlined style={{ marginRight: '8px' }} />
-                  <a href="mailto:drisanadasgupta123789@gmail.com" style={{ color: '#6366f1' }}>
-                    drisanadasgupta123789@gmail.com
-                  </a>
-                </Paragraph>
-                <Paragraph>
-                  <PhoneOutlined style={{ marginRight: '8px' }} />
-                  <a href="tel:+918918846865" style={{ color: '#6366f1' }}>
-                    +91 89188 46865
-                  </a>
-                </Paragraph>
-              </div>
-            </Card>
-          </div>
-        </section>
       </Content>
 
       <Footer style={{ textAlign: 'center', background: '#1f2937', color: 'white', padding: '40px 24px' }}>

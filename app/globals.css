@@ -148,6 +148,14 @@ button:hover {
   display: flex !important;
 }
 
+.desktop-menu .ant-menu-overflow-item {
+  display: flex !important;
+}
+
+.desktop-menu .ant-menu-overflow-item-rest {
+  display: none !important;
+}
+
 
 /* Signature font */
 .signature-font {
