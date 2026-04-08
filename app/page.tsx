@@ -292,6 +292,44 @@ export default function Home() {
                     Creative UI/UX Designer
                   </Title>
 
+                  {/* Current Experience */}
+                  <div style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '14px',
+                    background: 'rgba(255,255,255,0.15)',
+                    backdropFilter: 'blur(10px)',
+                    border: '1px solid rgba(255,255,255,0.3)',
+                    borderRadius: '12px',
+                    padding: '10px 16px',
+                    marginBottom: '24px',
+                  }}>
+                    <div style={{
+                      width: '36px',
+                      height: '36px',
+                      background: 'white',
+                      borderRadius: '8px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      flexShrink: 0,
+                      fontWeight: 800,
+                      fontSize: '9px',
+                      color: '#1a1a2e',
+                      letterSpacing: '0.5px'
+                    }}>
+                      LAXXA
+                    </div>
+                    <div>
+                      <div style={{ color: 'white', fontWeight: 600, fontSize: '13px', lineHeight: 1.3 }}>
+                        UI/UX and Product Designer
+                      </div>
+                      <div style={{ color: 'rgba(255,255,255,0.75)', fontSize: '12px', marginTop: '2px' }}>
+                        LAXXA · Full-time · Jan 2026 – Present
+                      </div>
+                    </div>
+                  </div>
+
                   {/* Description */}
                   <Paragraph style={{
                     color: 'rgba(255,255,255,0.9)',
@@ -371,42 +409,6 @@ export default function Home() {
                     </div>
                   </div>
 
-                  {/* Current Experience */}
-                  <div style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '14px',
-                    background: 'rgba(255,255,255,0.15)',
-                    backdropFilter: 'blur(10px)',
-                    border: '1px solid rgba(255,255,255,0.3)',
-                    borderRadius: '12px',
-                    padding: '12px 16px',
-                  }}>
-                    <div style={{
-                      width: '40px',
-                      height: '40px',
-                      background: 'white',
-                      borderRadius: '8px',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      flexShrink: 0,
-                      fontWeight: 800,
-                      fontSize: '10px',
-                      color: '#1a1a2e',
-                      letterSpacing: '0.5px'
-                    }}>
-                      LAXXA
-                    </div>
-                    <div>
-                      <div style={{ color: 'white', fontWeight: 600, fontSize: '14px', lineHeight: 1.3 }}>
-                        UI/UX and Product Designer
-                      </div>
-                      <div style={{ color: 'rgba(255,255,255,0.75)', fontSize: '12px', marginTop: '2px' }}>
-                        LAXXA · Full-time · Jan 2026 – Present
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </Col>
 
