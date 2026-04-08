@@ -154,7 +154,7 @@ export default function ProjectDetail() {
                 ))}
               </div>
 
-              <Button
+              {/* <Button
                 type="primary"
                 size="large"
                 href={project.figmaLink}
@@ -172,7 +172,7 @@ export default function ProjectDetail() {
                 }}
               >
                 View on Figma
-              </Button>
+              </Button> */}
             </Col>
           </Row>
 
